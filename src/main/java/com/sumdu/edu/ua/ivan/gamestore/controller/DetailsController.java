@@ -24,31 +24,31 @@ public class DetailsController {
 
     private final DetailsService service;
 
-    @PostMapping("/api/games/{gameId}/details")
+    @PostMapping("/games/{gameId}/details")
     public ResponseEntity<DetailsDto> createDetails(@PathVariable Long gameId,
                                                     @Valid @RequestBody DetailsDto detailsDto) {
         return new ResponseEntity<>(service.createDetails(gameId, detailsDto), HttpStatus.CREATED);
     }
 
-    @GetMapping("/api/games/{gameId}/details")
+    @GetMapping("/games/{gameId}/details")
     public ResponseEntity<List<DetailsDto>> getDetailsByGameId(@PathVariable Long gameId) {
         return ResponseEntity.ok(service.getDetailsByGameId(gameId));
     }
 
-    @GetMapping("/api/games/{gameId}/details/{detailsId}")
+    @GetMapping("/games/{gameId}/details/{detailsId}")
     public ResponseEntity<DetailsDto> getDetailsById(@PathVariable Long gameId,
                                                      @PathVariable Long detailsId) {
         return ResponseEntity.ok(service.getDetailsById(gameId, detailsId));
     }
 
-    @PutMapping("/api/games/{gameId}/details/{detailsId}")
+    @PutMapping("/games/{gameId}/details/{detailsId}")
     public ResponseEntity<DetailsDto> updateDetails(@PathVariable Long gameId,
                                                     @PathVariable Long detailsId,
                                                     @Valid @RequestBody DetailsDto detailsDto) {
         return new ResponseEntity<>(service.updateDetails(gameId, detailsId, detailsDto), HttpStatus.OK);
     }
 
-    @DeleteMapping("/api/games/{gameId}/details/{detailsId}")
+    @DeleteMapping("/games/{gameId}/details/{detailsId}")
     public ResponseEntity<String> deleteDetails(@PathVariable Long gameId,
                                                 @PathVariable Long detailsId) {
         service.deleteDetails(gameId, detailsId);
