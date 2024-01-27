@@ -4,6 +4,8 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
+import java.util.Set;
+
 @Data
 public class GameDto {
 
@@ -17,4 +19,5 @@ public class GameDto {
 
     @NotBlank(message = "Must not be empty")
     private String imageUrl;
+    private Set<DetailsDto> details;
 }

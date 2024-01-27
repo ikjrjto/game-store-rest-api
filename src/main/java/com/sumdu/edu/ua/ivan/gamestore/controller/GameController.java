@@ -51,7 +51,7 @@ public class GameController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteGame(@PathVariable Long id){
+    public ResponseEntity<String> deleteGame(@PathVariable Long id) {
         service.deleteGame(id);
         return new ResponseEntity<>("Game entity deleted successfully", HttpStatus.OK);
     }
