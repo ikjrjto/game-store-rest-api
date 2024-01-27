@@ -17,6 +17,12 @@ easy integration into various platforms, fostering a dynamic and interconnected 
 
 **Database:** MySQL
 
+## Code Check
+
+- [IntelliJ IDEA Codestyle](https://www.jetbrains.com/help/idea/configuring-code-style.html#configure-code-style-schemes)
+- [Code Style Check tool {extension}](https://plugins.jetbrains.com/plugin/10798-code-style-check-tool)
+
+
 ## Run Locally
 
 Firstly, create database
